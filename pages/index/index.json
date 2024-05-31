@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "home":"../home/index",
+    "app":"../app/index",
+    "chat":"../chat/index",
+    "user":"../user/index"
+  }
+
+}

@@ -1,0 +1,8 @@
+Page{
+  padding-bottom: 200rpx;
+}
+
+.top{
+  margin-bottom: 30rpx;
+  z-index: 99;
+}

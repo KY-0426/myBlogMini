@@ -1,0 +1,10 @@
+<!--pages/search/index.wxml-->
+<t-toast id="t-toast" />
+<view class="block">
+  <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" left-arrow title="搜索" />
+</view>
+<view class="example-search">
+  <t-search  placeholder="搜索更多" model:value="{{searchValue}}" 	bind:submit="toSearchTap" />
+</view>
+
+

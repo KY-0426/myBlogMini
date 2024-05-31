@@ -1,0 +1,33 @@
+<!--pages/home/index.wxml-->
+<!-- 搜索 -->
+<view class="example-search">
+  <t-search disabled placeholder="搜索更多" bindtap="ToSearchPage" />
+</view>
+<!-- 轮播图 -->
+<view class="container">
+  <t-swiper current="{{current}}" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}" list="{{swiperList}}" navigation="{{ { type: 'dots-bar' } }}" />
+</view>
+<!-- 选项卡 -->
+<t-popup visible="{{visible}}" bind:visible-change="onVisibleChange">
+  <!-- 默认选项id  defaultValue -->
+  <t-tabs id="tabs" defaultValue="{{1}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs" t-class-content="custom-panel">
+    <block wx:for="{{articleTypesList}}" wx:key="*this" wx:for-item="item">
+      <t-tab-panel label="{{item.label}}" value="{{item.id}}" style="{{tabPanelstyle}}">
+        <!-- 不同的分类 不同的样式wx:if="{{item.id%2===1}}" -->
+        <view style="width: 100%;" >
+          <!-- 文章类型和选项id 一样 -->
+          <block wx:for="{{articleList}}" wx:key="*this" wx:for-item="item1">
+            <block wx:if="{{item1.type_id === item.id}}">
+              <t-cell class="t-cell-img" title="{{item1.title}}" description="{{item1.content}}" align="top" image="https://tdesign.gtimg.com/mobile/demos/swiper1.png" hover bordered="{{true}}" bind:tap="ToArticlePage" data-id="{{item1.id}}"/>
+            </block>
+          </block>
+        </view>
+        <!-- <view style="width: 100%;" wx:if="{{item.id%2===0}}">
+          <block wx:for="{{articleList}}" wx:key="*this" wx:for-item="item1" wx:if="{{item1.type_id === item.id}}">
+            <t-cell class="t-cell-img" title="{{item1.title}}" description="{{item1.content}}" align="top" image="https://tdesign.gtimg.com/mobile/demos/avatar1.png" hover bordered="{{true}}" />
+          </block>
+        </view> -->
+      </t-tab-panel>
+    </block>
+  </t-tabs>
+</t-popup>

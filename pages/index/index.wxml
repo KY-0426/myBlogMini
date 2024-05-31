@@ -1,0 +1,17 @@
+<!--pages/index/index.wxml-->
+<navbar></navbar>
+
+<home wx:if="{{value  === 'label_1'}}"></home>
+<app wx:if="{{value  === 'label_2'}}"></app>
+<chat wx:if="{{value  === 'label_3'}}"></chat>
+<user wx:if="{{value  === 'label_4'}}"></user>
+
+<!-- 基础页脚 只有版权信息 -->
+<t-footer class="footer" text="{{text}}"></t-footer>
+
+
+<!-- 标签栏 -->
+<t-tab-bar class="top" t-class="t-tab-bar" value="{{value}}" bindchange="onChange" shape="round" theme="tag" split="{{false}}">
+  <t-tab-bar-item wx:for="{{list}}" wx:key="index" value="{{item.value}}" icon="{{item.icon}}" ariaLabel="{{item.ariaLabel}}">
+  </t-tab-bar-item>
+</t-tab-bar>

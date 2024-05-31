@@ -1,0 +1,16 @@
+<!--pages/home/articleDetails/articleDetails.wxml-->
+<t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" title="">
+  <view slot="capsule" class="custom-capsule">
+    <t-icon size="20" bind:tap="onBack" aria-role="button" aria-label="返回" name="chevron-left" class="custom-capsule__icon back" />
+    <t-icon size="20" bind:tap="onGoHome" aria-role="button" aria-label="首页" name="home" class="custom-capsule__icon home" />
+  </view>
+</t-navbar>
+
+<view class="demo" hover-class="none" hover-stop-propagation="false">
+  <view class="demo-title">{{data.title}}</view>
+  <view class="demo-desc">作者：{{data.author}}</view>
+  <view  class="demo-content">
+   <rich-text nodes="{{data.content}}"  user-select="true"></rich-text>
+  </view>
+ 
+</view>

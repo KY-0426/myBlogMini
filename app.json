@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/index",
+    "pages/home/articleDetails/articleDetails",
+    "pages/app/index",
+    "pages/chat/index",
+    "pages/user/index",
+    "pages/search/index"      
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTitleText": "kaiyu",
+    "navigationBarBackgroundColor": "#f6f6f6",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f6f6f6"
+  },
+  
+  "usingComponents": {
+    "t-search": "tdesign-miniprogram/search/search",
+    "t-navbar": "tdesign-miniprogram/navbar/navbar",
+    "t-toast": "tdesign-miniprogram/toast/toast",
+    "t-swiper": "tdesign-miniprogram/swiper/swiper",
+    "t-tab-bar": "tdesign-miniprogram/tab-bar/tab-bar",
+    "t-tab-bar-item": "tdesign-miniprogram/tab-bar-item/tab-bar-item",
+    "t-tabs": "tdesign-miniprogram/tabs/tabs",
+    "t-tab-panel": "tdesign-miniprogram/tab-panel/tab-panel",
+    "t-footer": "tdesign-miniprogram/footer/footer",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-sticky": "tdesign-miniprogram/sticky/sticky",
+    "t-loading": "tdesign-miniprogram/loading/loading",
+    "t-empty": "tdesign-miniprogram/empty/empty",
+    "t-icon": "tdesign-miniprogram/icon/icon",
+    "navbar":"../../components/navbar/navbar"
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
