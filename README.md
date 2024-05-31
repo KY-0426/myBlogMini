@@ -4,7 +4,7 @@ data文件夹中的数据由文心一言生成
 
 主页
 
-![image](https://github.com/KY-0426/myBlogMini/assets/78643488/d5cadf02-72cf-444f-9ac9-7c2517bc8ad6)
+![主页](https://github.com/KY-0426/myBlogMini/assets/78643488/d5cadf02-72cf-444f-9ac9-7c2517bc8ad6)
 
 
 文章详情
